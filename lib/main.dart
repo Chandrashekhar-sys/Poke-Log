@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'providers/pokemon_provider.dart';
 import 'screens/home_screen.dart';
 import 'services/pokemon_service.dart';
+import 'package:poke_log/poke_loading.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,13 +58,3 @@ class _PokeAppState extends State<PokeApp> {
   }
 }
 
-class LoadingScreen extends StatelessWidget {
-  const LoadingScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: CircularProgressIndicator()),
-    );
-  }
-}
