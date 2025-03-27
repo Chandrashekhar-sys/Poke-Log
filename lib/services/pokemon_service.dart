@@ -17,7 +17,7 @@ class PokemonService {
   static final http.Client _persistentClient = http.Client();
 
   /// Fetches a list of all Pokémon from the API with optimized loading
-  static Future<List<Pokemon>> fetchPokemonList({int limit = 1010}) async {
+  static Future<List<Pokemon>> fetchPokemonList({int limit = 1025}) async {
     final response = await _persistentClient.get(Uri.parse('$baseUrl?limit=$limit'));
 
     if (response.statusCode == 200) {
