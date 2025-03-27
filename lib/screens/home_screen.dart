@@ -85,9 +85,16 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: _toggleSearch,
             )
                 : null,
-            flexibleSpace: FlexibleSpaceBar(
-              title: _isSearching ? null : (_showTitle ? const Text('PokéLog') : null),
-              background: Stack(
+        flexibleSpace: FlexibleSpaceBar(
+          title: _isSearching
+              ? null
+              : (_showTitle
+              ? const Text(
+            'PokéLog',
+            style: TextStyle(color: Colors.white),
+          )
+              : null),
+        background: Stack(
                 fit: StackFit.expand,
                 children: [
                   // Background gradient
