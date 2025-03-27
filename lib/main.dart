@@ -50,8 +50,6 @@ class _PokeAppState extends State<PokeApp> {
     return MaterialApp(
       title: 'PokeLog',
       theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: isLoading ? const LoadingScreen() : const HomeScreen(),
     );
